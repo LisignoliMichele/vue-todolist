@@ -15,7 +15,7 @@
          <ol v-if="toDOList.length > 0">
             <li v-for="(item, i) in toDOList">{{item}} <span @click="deleteItem(i)">X</span></li>
          </ol>
-         <input type="text" placeholder="aggiungi un desiderio" v-model="newItem">
+         <input type="text" placeholder="aggiungi un desiderio" v-model="newItem" @keyDown.13="addItem">
          <button @click="addItem">aggiungi</button>
       </div>
       <script src="js/script.js"></script>
